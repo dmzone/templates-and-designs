@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="#"> <!-- (Example: description to be displayed on Search Engine) -->
+  <meta name="Author" content="#"> <!-- (example: Developers Name) -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Tables Galore</title>
+
+<!-- ====== Stylesheets ======= -->
+  <!-- Bootstrap.css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+
+<body>
+
+<!-- ======= Content ======= -->
+<div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#basic" aria-controls="basic" role="tab" data-toggle="tab">Bootstrap Basic</a></li>
+    <li role="presentation"><a href="#striped" aria-controls="striped" role="tab" data-toggle="tab">Striped Rows</a></li>
+    <li role="presentation"><a href="#bordered" aria-controls="bordered" role="tab" data-toggle="tab">Bordered Table</a></li>
+    <li role="presentation"><a href="#hover" aria-controls="hover" role="tab" data-toggle="tab">Hover Rows</a></li>
+    <li role="presentation"><a href="#condensed" aria-controls="condensed" role="tab" data-toggle="tab">Condensed Table</a></li>
+    <li role="presentation"><a href="#colored" aria-controls="colored" role="tab" data-toggle="tab">Colored Rows</a></li>
+    <li role="presentation"><a href="#responsive" aria-controls="responsive" role="tab" data-toggle="tab">Responsive Table</a></li>
+    <li role="presentation"><a href="#allinone" aria-controls="allinone" role="tab" data-toggle="tab">All in One</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="basic">
+      <!-- Bootstrap Basic -->
+      <div class="container">
+        <h2>Bootstrap Basic</h2>
+        <p>U.S. Federal Holidays, 2016</p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Weekday</th>
+              <th>Holiday Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jan 1</td>
+              <td>Friday</td>
+              <td>New Year's Day</td>
+            </tr>
+            <tr>
+              <td>Jan 18</td>
+              <td>Monday</td>
+              <td>Martin Luther King Day</td>
+            </tr>
+            <tr>
+              <td>Feb 15</td>
+              <td>Monday</td>
+              <td>Presidents' Day</td>
+            </tr>
+            <tr>
+              <td>May 30</td>
+              <td>Monday</td>
+              <td>Memorial Day</td>
+            </tr>
+            <tr>
+              <td>July 4</td>
+              <td>Monday</td>
+              <td>Independence Day</td>
+            </tr>
+            <tr>
+              <td>Sep 5</td>
+              <td>Monday</td>
+              <td>Labor Day</td>
+            </tr>
+            <tr>
+              <td>Oct 10</td>
+              <td>Monday</td>
+              <td>Columbus Day</td>
+            </tr>
+            <tr>
+              <td>Nov 11</td>
+              <td>Friday</td>
+              <td>Veterans Day</td>
+            </tr>
+            <tr>
+              <td>Nov 24</td>
+              <td>Thursday</td>
+              <td>Thanksgiving Day</td>
+            </tr>
+            <tr>
+              <td>Dec 25</td>
+              <td>Sunday</td>
+              <td>Christmas</td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- end table-->
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="striped">
+      <!-- Striped Rows -->
+      <div class="container">
+        <h2>Striped Rows</h2>
+        <p>U.S. Federal Holidays, 2016</p>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Weekday</th>
+              <th>Holiday Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jan 1</td>
+              <td>Friday</td>
+              <td>New Year's Day</td>
+            </tr>
+            <tr>
+              <td>Jan 18</td>
+              <td>Monday</td>
+              <td>Martin Luther King Day</td>
+            </tr>
+            <tr>
+              <td>Feb 15</td>
+              <td>Monday</td>
+              <td>Presidents' Day</td>
+            </tr>
+            <tr>
+              <td>May 30</td>
+              <td>Monday</td>
+              <td>Memorial Day</td>
+            </tr>
+            <tr>
+              <td>July 4</td>
+              <td>Monday</td>
+              <td>Independence Day</td>
+            </tr>
+            <tr>
+              <td>Sep 5</td>
+              <td>Monday</td>
+              <td>Labor Day</td>
+            </tr>
+            <tr>
+              <td>Oct 10</td>
+              <td>Monday</td>
+              <td>Columbus Day</td>
+            </tr>
+            <tr>
+              <td>Nov 11</td>
+              <td>Friday</td>
+              <td>Veterans Day</td>
+            </tr>
+            <tr>
+              <td>Nov 24</td>
+              <td>Thursday</td>
+              <td>Thanksgiving Day</td>
+            </tr>
+            <tr>
+              <td>Dec 25</td>
+              <td>Sunday</td>
+              <td>Christmas</td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- end table-->
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="bordered">
+      <!-- Bordered Table -->
+      <div class="container">
+        <h2>Bordered Table</h2>
+        <p>U.S. Federal Holidays, 2016</p>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Weekday</th>
+              <th>Holiday Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jan 1</td>
+              <td>Friday</td>
+              <td>New Year's Day</td>
+            </tr>
+            <tr>
+              <td>Jan 18</td>
+              <td>Monday</td>
+              <td>Martin Luther King Day</td>
+            </tr>
+            <tr>
+              <td>Feb 15</td>
+              <td>Monday</td>
+              <td>Presidents' Day</td>
+            </tr>
+            <tr>
+              <td>May 30</td>
+              <td>Monday</td>
+              <td>Memorial Day</td>
+            </tr>
+            <tr>
+              <td>July 4</td>
+              <td>Monday</td>
+              <td>Independence Day</td>
+            </tr>
+            <tr>
+              <td>Sep 5</td>
+              <td>Monday</td>
+              <td>Labor Day</td>
+            </tr>
+            <tr>
+              <td>Oct 10</td>
+              <td>Monday</td>
+              <td>Columbus Day</td>
+            </tr>
+            <tr>
+              <td>Nov 11</td>
+              <td>Friday</td>
+              <td>Veterans Day</td>
+            </tr>
+            <tr>
+              <td>Nov 24</td>
+              <td>Thursday</td>
+              <td>Thanksgiving Day</td>
+            </tr>
+            <tr>
+              <td>Dec 25</td>
+              <td>Sunday</td>
+              <td>Christmas</td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- end table-->
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="hover">
+      <!-- Hover Rows -->
+      <div class="container">
+        <h2>Hover Rows</h2>
+        <p>U.S. Federal Holidays, 2016</p>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Weekday</th>
+              <th>Holiday Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jan 1</td>
+              <td>Friday</td>
+              <td>New Year's Day</td>
+            </tr>
+            <tr>
+              <td>Jan 18</td>
+              <td>Monday</td>
+              <td>Martin Luther King Day</td>
+            </tr>
+            <tr>
+              <td>Feb 15</td>
+              <td>Monday</td>
+              <td>Presidents' Day</td>
+            </tr>
+            <tr>
+              <td>May 30</td>
+              <td>Monday</td>
+              <td>Memorial Day</td>
+            </tr>
+            <tr>
+              <td>July 4</td>
+              <td>Monday</td>
+              <td>Independence Day</td>
+            </tr>
+            <tr>
+              <td>Sep 5</td>
+              <td>Monday</td>
+              <td>Labor Day</td>
+            </tr>
+            <tr>
+              <td>Oct 10</td>
+              <td>Monday</td>
+              <td>Columbus Day</td>
+            </tr>
+            <tr>
+              <td>Nov 11</td>
+              <td>Friday</td>
+              <td>Veterans Day</td>
+            </tr>
+            <tr>
+              <td>Nov 24</td>
+              <td>Thursday</td>
+              <td>Thanksgiving Day</td>
+            </tr>
+            <tr>
+              <td>Dec 25</td>
+              <td>Sunday</td>
+              <td>Christmas</td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- end table-->
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="condensed">
+      <!-- Condensed Table -->
+      <div class="container">
+        <h2>Condensed Table</h2>
+        <p>U.S. Federal Holidays, 2016</p>
+        <table class="table table-condensed">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Weekday</th>
+              <th>Holiday Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jan 1</td>
+              <td>Friday</td>
+              <td>New Year's Day</td>
+            </tr>
+            <tr>
+              <td>Jan 18</td>
+              <td>Monday</td>
+              <td>Martin Luther King Day</td>
+            </tr>
+            <tr>
+              <td>Feb 15</td>
+              <td>Monday</td>
+              <td>Presidents' Day</td>
+            </tr>
+            <tr>
+              <td>May 30</td>
+              <td>Monday</td>
+              <td>Memorial Day</td>
+            </tr>
+            <tr>
+              <td>July 4</td>
+              <td>Monday</td>
+              <td>Independence Day</td>
+            </tr>
+            <tr>
+              <td>Sep 5</td>
+              <td>Monday</td>
+              <td>Labor Day</td>
+            </tr>
+            <tr>
+              <td>Oct 10</td>
+              <td>Monday</td>
+              <td>Columbus Day</td>
+            </tr>
+            <tr>
+              <td>Nov 11</td>
+              <td>Friday</td>
+              <td>Veterans Day</td>
+            </tr>
+            <tr>
+              <td>Nov 24</td>
+              <td>Thursday</td>
+              <td>Thanksgiving Day</td>
+            </tr>
+            <tr>
+              <td>Dec 25</td>
+              <td>Sunday</td>
+              <td>Christmas</td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- end table-->
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="colored">
+      <!-- Colored Rows -->
+      <div class="container">
+        <h2>Colored Rows</h2>
+        <p>U.S. Federal Holidays, 2016</p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Weekday</th>
+              <th>Holiday Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="success">
+              <td>Jan 1</td>
+              <td>Friday</td>
+              <td>New Year's Day</td>
+            </tr>
+            <tr class="info">
+              <td>Jan 18</td>
+              <td>Monday</td>
+              <td>Martin Luther King Day</td>
+            </tr>
+            <tr class="danger">
+              <td>Feb 15</td>
+              <td>Monday</td>
+              <td>Presidents' Day</td>
+            </tr>
+            <tr class="warning">
+              <td>May 30</td>
+              <td>Monday</td>
+              <td>Memorial Day</td>
+            </tr>
+            <tr class="success">
+              <td>July 4</td>
+              <td>Monday</td>
+              <td>Independence Day</td>
+            </tr>
+            <tr class="info">
+              <td>Sep 5</td>
+              <td>Monday</td>
+              <td>Labor Day</td>
+            </tr>
+            <tr class="danger">
+              <td>Oct 10</td>
+              <td>Monday</td>
+              <td>Columbus Day</td>
+            </tr>
+            <tr class="warning">
+              <td>Nov 11</td>
+              <td>Friday</td>
+              <td>Veterans Day</td>
+            </tr>
+            <tr class="success">
+              <td>Nov 24</td>
+              <td>Thursday</td>
+              <td>Thanksgiving Day</td>
+            </tr>
+            <tr class="info">
+              <td>Dec 25</td>
+              <td>Sunday</td>
+              <td>Christmas</td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- end table-->
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="responsive">
+      <!-- Responsive Table -->
+      <div class="container">
+        <h2>Responsive Table</h2>
+        <p>U.S. Federal Holidays, 2016</p>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Weekday</th>
+                <th>Holiday Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Jan 1</td>
+                <td>Friday</td>
+                <td>New Year's Day</td>
+              </tr>
+              <tr>
+                <td>Jan 18</td>
+                <td>Monday</td>
+                <td>Martin Luther King Day</td>
+              </tr>
+              <tr>
+                <td>Feb 15</td>
+                <td>Monday</td>
+                <td>Presidents' Day</td>
+              </tr>
+              <tr>
+                <td>May 30</td>
+                <td>Monday</td>
+                <td>Memorial Day</td>
+              </tr>
+              <tr>
+                <td>July 4</td>
+                <td>Monday</td>
+                <td>Independence Day</td>
+              </tr>
+              <tr>
+                <td>Sep 5</td>
+                <td>Monday</td>
+                <td>Labor Day</td>
+              </tr>
+              <tr>
+                <td>Oct 10</td>
+                <td>Monday</td>
+                <td>Columbus Day</td>
+              </tr>
+              <tr>
+                <td>Nov 11</td>
+                <td>Friday</td>
+                <td>Veterans Day</td>
+              </tr>
+              <tr>
+                <td>Nov 24</td>
+                <td>Thursday</td>
+                <td>Thanksgiving Day</td>
+              </tr>
+              <tr>
+                <td>Dec 25</td>
+                <td>Sunday</td>
+                <td>Christmas</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div><!-- end table-->
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="allinone">
+      <!-- All in One -->
+      <div class="container">
+        <h2>All in One</h2>
+        <p>U.S. Federal Holidays, 2016</p>
+        <table class="table table-bordered table-condensed table-hover">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Weekday</th>
+              <th>Holiday Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="success">
+              <td>Jan 1</td>
+              <td>Friday</td>
+              <td>New Year's Day</td>
+            </tr>
+            <tr class="info">
+              <td>Jan 18</td>
+              <td>Monday</td>
+              <td>Martin Luther King Day</td>
+            </tr>
+            <tr class="warning">
+              <td>Feb 15</td>
+              <td>Monday</td>
+              <td>Presidents' Day</td>
+            </tr>
+            <tr class="danger">
+              <td>May 30</td>
+              <td>Monday</td>
+              <td>Memorial Day</td>
+            </tr>
+            <tr class="success">
+              <td>July 4</td>
+              <td>Monday</td>
+              <td>Independence Day</td>
+            </tr>
+            <tr class="info">
+              <td>Sep 5</td>
+              <td>Monday</td>
+              <td>Labor Day</td>
+            </tr>
+            <tr class="warning">
+              <td>Oct 10</td>
+              <td>Monday</td>
+              <td>Columbus Day</td>
+            </tr>
+            <tr class="danger">
+              <td>Nov 11</td>
+              <td>Friday</td>
+              <td>Veterans Day</td>
+            </tr>
+            <tr class="success">
+              <td>Nov 24</td>
+              <td>Thursday</td>
+              <td>Thanksgiving Day</td>
+            </tr>
+            <tr class="info">
+              <td>Dec 25</td>
+              <td>Sunday</td>
+              <td>Christmas</td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- end table-->
+    </div>
+  </div>
+</div>
+
+<!-- ======= Scripts ======= -->
+  <!-- jQuery.js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+  <!-- Bootstrap.js -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+
+</html>
