@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="#"> <!-- (Example: description to be displayed on Search Engine) -->
+  <meta name="Author" content="#"> <!-- (example: Developers Name) -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Title</title>
+
+<!-- ====== Stylesheets ======= -->
+  <!-- Bootstrap.css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+  body {
+    padding: 30px;
+  }
+  .btn a,
+  .btn a:hover,
+  .btn a:focus {
+    color: black;
+    text-decoration: none;
+  }
+  </style>
+</head>
+
+<body>
+
+<!-- ======= Content ======= -->
+
+<section>
+  <div class="row">
+    <h1>Different HTML Approaches: </h1>
+    <!-- Style 1 -->
+    <span>Link in a Button: </span>
+    <button type="button" class="btn btn-default" aria-label="Euro">
+      <a class="glyphicon glyphicon-euro" href="#" role="button"> Euro</a>
+    </button>
+    <!-- Style 2 -->
+    <span>Span in a Link: </span>
+    <a href="#" class="btn btn-default" role="button">
+      <span class="glyphicon glyphicon-euro"> Euro</span>
+    </a>
+  </div><!-- end different styles -->
+
+  <div class="row">
+    <h2>Email: </h2>
+    <!-- Default -->
+    <a href="mailto:someone@example.com" class="btn btn-default" role="button">
+      <span class="glyphicon glyphicon-envelope"> Email</span>
+    </a>
+    <!-- Blue -->
+    <a href="mailto:someone@example.com" class="btn btn-primary" role="button">
+      <span class="glyphicon glyphicon-envelope"> Email</span>
+    </a>
+    <!-- Green -->
+    <a href="mailto:someone@example.com" class="btn btn-success" role="button">
+      <span class="glyphicon glyphicon-envelope"> Email</span>
+    </a>
+    <!-- Light Blue -->
+    <a href="mailto:someone@example.com" class="btn btn-info" role="button">
+      <span class="glyphicon glyphicon-envelope"> Email</span>
+    </a>
+    <!-- Orange -->
+    <a href="mailto:someone@example.com" class="btn btn-warning" role="button">
+      <span class="glyphicon glyphicon-envelope"> Email</span>
+    </a>
+    <!-- Red -->
+    <a href="mailto:someone@example.com" class="btn btn-danger" role="button">
+      <span class="glyphicon glyphicon-envelope"> Email</span>
+    </a>
+</section>
+
+
+<!-- ======= Scripts ======= -->
+  <!-- jQuery.js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <!-- Bootstrap.js -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!-- Custom JS -->
+  <script>
+  </script>
+</body>
+
+</html>
