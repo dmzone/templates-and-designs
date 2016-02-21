@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="#"> <!-- (Example: description to be displayed on Search Engine) -->
+  <meta name="Author" content="#"> <!-- (example: Developers Name) -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Design 5</title>
+
+<!-- ====== Stylesheets ======= -->
+  <!-- Font Awesome -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Bootstrap.css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+  .wrapper {
+    background-color: white;
+    width: 980px;
+    max-width: 100%;
+  }
+  .tile {
+    width: 250px;
+    max-width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    margin: 20px auto;
+  }
+  .tile h2,
+  .tile span {
+    font-size: 2em;
+    margin: 50px 0 50px 0;
+  }
+  .tile:hover,
+  .tile:focus {
+    box-shadow: 0 0 8px black;
+    opacity: 0.8;
+  }
+  .tile-header {
+    height: 200px;
+    color: white;
+    padding: 10px;
+    font-size: 40px;
+  }
+  .tile-green {
+    background-color: green;
+  }
+  .tile-blue {
+    background-color: blue;
+  }
+  .tile-red {
+    background-color: red;
+  }
+  .tile-content {
+    padding: 10px;
+    max-width: 100%;
+  }
+  </style>
+</head>
+
+<body>
+
+<!-- ======= Content ======= -->
+
+<div class="container">
+  <div class="row text-center">
+    <div class="col-xs-12">
+      <h1>Header Here</h1>
+    </div>
+  </div><!--end row-->
+  <!-- Color Tiles -->
+  <div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-4">
+      <div class="tile">
+        <div class="tile-header tile-green">
+          <span class="fa fa-google"></span>
+        </div>
+        <div class="tile-content">
+          <p>Arbitrary Text</p>
+        </div>
+      </div><!--end tile-->
+    </div><!--end column-->
+
+    <div class="col-sm-6 col-md-6 col-lg-4">
+      <div class="tile">
+        <div class="tile-header tile-blue">
+          <span class="fa fa-twitter"></span>
+        </div>
+        <div class="tile-content">
+          <p>Arbitrary Text</p>
+        </div>
+      </div><!--end tile-->
+    </div><!--end column-->
+
+    <div class="col-sm-6 col-md-6 col-lg-4">
+      <div class="tile">
+        <div class="tile-header tile-red">
+          <span class="fa fa-linkedin"></span>
+        </div>
+        <div class="tile-content">
+          <p>Arbitrary Text</p>
+        </div>
+      </div><!--end tile-->
+    </div><!--end column-->
+  </div><!--end row-->
+
+  <!-- Image Tiles -->
+  <div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-4">
+      <div class="tile">
+        <img src="https://placeimg.com/250/200/people" alt="placeholder image" class="img-responsive">
+        <div class="tile-content">
+          <p>Arbitrary Text</p>
+        </div>
+      </div><!--end tile-->
+    </div><!--end column-->
+
+    <div class="col-sm-6 col-md-6 col-lg-4">
+      <div class="tile">
+        <img src="https://placeimg.com/250/200/sepia" alt="placeholder image" class="img-responsive">
+        <div class="tile-content">
+          <p>Arbitrary Text</p>
+        </div>
+      </div><!--end tile-->
+    </div><!--end column-->
+
+    <div class="col-sm-6 col-md-6 col-lg-4">
+      <div class="tile">
+        <img src="https://placeimg.com/250/200/tech" alt="placeholder image" class="img-responsive">
+        <div class="tile-content">
+          <p>Arbitrary Text</p>
+        </div>
+      </div><!--end tile-->
+    </div><!--end column-->
+  </div><!--end row-->
+</div><!--end container-->
+
+
+
+<!-- ======= Scripts ======= -->
+  <!-- jQuery.js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <!-- Bootstrap.js -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!-- Custom JS -->
+  <script>
+  function generate(inputArray){
+    var background = inputArray['background'];
+    var seed = inputArray['seed'];
+    var size = inputArray['size'];
+    var octaves = inputArray['octaves'];
+    size = size/10000;
+
+    return `
+    <svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='1' height='100%' id='svg2'>
+      <defs id='defs4'>
+        <filter x='-1' y='-1' width='2' height='2' color-interpolation-filters='sRGB' id='filter3001'>
+          <feTurbulence type='fractalNoise' seed='${ seed }' baseFrequency='0 ${ size }' numOctaves='${ octaves }' result='result5' id='feTurbulence3007' />
+        </filter>
+      </defs>
+      <rect height='102%' width='100%' style='filter:url(#filter3001)' />
+    </svg>`;
+  }
+  </script>
+</body>
+</html>
