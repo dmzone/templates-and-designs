@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="#"> <!-- (Example: description to be displayed on Search Engine) -->
+  <meta name="Author" content="#"> <!-- (example: Developers Name) -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Layout Shifter</title>
+
+<!-- ====== Stylesheets ======= -->
+  <!-- Custom CSS -->
+  <style>
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  .container-fluid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #container2 {
+    width: 100%;
+  }
+  .box {
+    width: 100%;
+    min-height: 175px;
+  }
+  .dark_blue {
+    background-color: #000080;
+  }
+  .light_blue {
+    background-color: #add8e6;
+  }
+  .green {
+    background-color: green;
+  }
+  .red {
+    background-color: red;
+  }
+  .orange {
+    background-color: orange;
+  }
+  </style>
+  <!-- Media Queries -->
+  <style>
+  @media screen and (min-width: 500px) and (max-width: 767px) {
+    .dark_blue,
+    #container2 {
+      width: 50%;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .dark_blue {
+      width: 25%;
+      order: 1;
+    }
+    #container2 {
+      width: 50%;
+    }
+    .red {
+      width: 25%;
+      order: -1;
+    }
+  }
+  </style>
+</head>
+
+<body>
+
+<!-- ======= Content ======= -->
+
+<div class="container-fluid">
+  <div class="box dark_blue"></div>
+  <div class="container" id="container2">
+    <div class="box light_blue"></div>
+    <div class="box green"></div>
+  </div>
+  <div class="box red"></div>
+</div>
+
+<!-- ======= Scripts ======= -->
+</body>
+
+</html>
