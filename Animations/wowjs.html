@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="#"> <!-- (Example: description to be displayed on Search Engine) -->
+  <meta name="Author" content="#"> <!-- (example: Developers Name) -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Wow js</title>
+
+<!-- ====== Stylesheets ======= -->
+  <!-- Bootstrap.css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Animsition CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.1/css/animsition.min.css">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+  <!-- Custom CSS -->
+  <style>
+  #productRow {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  </style>
+</head>
+
+<body>
+
+<!-- ======= Content ======= -->
+<section
+  class="animsition"
+  data-animsition-in-class="fade-in"
+  data-animsition-in-duration="2000"
+  data-animsition-out-class="fade-out"
+  data-animsition-out-duration="2000"
+>
+  <img src="http://placehold.it/1920x800" class="img-responsive">
+</section>
+
+<div id="blank-space" style="margin: 200px" class="text-center">
+  <h1>Keep scrolling!</h2>
+</div>
+
+<section class="container" id="productRow">
+  <div class="row">
+    <div class="col-xs-12 col-md-4 wow fadeInLeft">
+      <img class="img-responsive img-circle center-block rotate-hover" src="http://placehold.it/150x150" alt="product 1">
+      <h2 class="text-center">Heading</h2>
+      <p class="text-justify">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+    </div>
+    <div class="col-xs-12 col-md-4 wow fadeInUp">
+      <img class="img-responsive img-circle center-block rotate-hover" src="http://placehold.it/150x150" alt="product 2">
+      <h2 class="text-center">Heading</h2>
+      <p class="text-justify">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+    </div>
+    <div class="col-xs-12 col-md-4 wow fadeInRight">
+      <img class="img-responsive img-circle center-block rotate-hover" src="http://placehold.it/150x150" alt="product 3">
+      <h2 class="text-center">Heading</h2>
+      <p class="text-justify">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container" id="productRow">
+  <div class="row">
+    <div class="col-xs-12 col-md-4 wow fadeInLeft">
+      <img class="img-responsive img-circle center-block rotate-hover" src="http://placehold.it/150x150" alt="product 1">
+      <h2 class="text-center">Heading</h2>
+      <p class="text-justify">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+    </div>
+    <div class="col-xs-12 col-md-4 wow fadeInUp">
+      <img class="img-responsive img-circle center-block rotate-hover" src="http://placehold.it/150x150" alt="product 2">
+      <h2 class="text-center">Heading</h2>
+      <p class="text-justify">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+    </div>
+    <div class="col-xs-12 col-md-4 wow fadeInRight">
+      <img class="img-responsive img-circle center-block rotate-hover" src="http://placehold.it/150x150" alt="product 3">
+      <h2 class="text-center">Heading</h2>
+      <p class="text-justify">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======= Scripts ======= -->
+  <!-- jQuery.js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <!-- Animsition.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.1/js/animsition.min.js"></script>
+  <!-- Wow.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script>
+  new WOW().init();
+  </script>
+  <!-- Bootstrap.js -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!-- Custom JS -->
+  <script>
+  $(document).ready(function() {
+    // Animsition.css
+    $(".animsition").animsition({
+      inClass: 'fade-in',
+      outClass: 'fade-out',
+      inDuration: 1500,
+      outDuration: 800,
+      linkElement: '.animsition-link',
+      // e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
+      loading: true,
+      loadingParentElement: 'body', //animsition wrapper element
+      loadingClass: 'animsition-loading',
+      loadingInner: '', // e.g '<img src="loading.svg" />'
+      timeout: false,
+      timeoutCountdown: 5000,
+      onLoadEvent: true,
+      browser: [ 'animation-duration', '-webkit-animation-duration'],
+      // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+      // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+      overlay : false,
+      overlayClass : 'animsition-overlay-slide',
+      overlayParentElement : 'body',
+      transition: function(url){ window.location.href = url; }
+    });
+    // Store variables for animations to simplify code
+    var animationName = 'animated bounce';
+    var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+    // Animate.css
+    $(".rotate-hover").hover(function() {
+      $(this).addClass(animationName).one(animationEnd, function() {
+          $(this).removeClass(animationName);
+        });
+    });
+  });
+  </script>
+</body>
+
+</html>
