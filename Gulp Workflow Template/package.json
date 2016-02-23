@@ -1,7 +1,7 @@
 {
-  "name": "alexswiontek.github.io",
+  "name": "name",
   "version": "1.0.0",
-  "description": "alex swiontek resume portfolio",
+  "description": "description",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
@@ -17,16 +17,6 @@
     "type": "git",
     "url": "git+https://github.com/alexswiontek/alexswiontek.github.io.git"
   },
-  "keywords": [
-    "alex",
-    "swiontek",
-    "resume",
-    "portfolio"
-  ],
-  "author": "alex swiontek",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/alexswiontek/alexswiontek.github.io/issues"
-  },
-  "homepage": "https://github.com/alexswiontek/alexswiontek.github.io#readme"
+  "author": "author",
+  "license": "ISC"
 }
