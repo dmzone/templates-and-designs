@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="#"> <!-- (Example: description to be displayed on Search Engine) -->
+  <meta name="Author" content="#"> <!-- (example: Developers Name) -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Design 7</title>
+
+<!-- ====== Stylesheets ======= -->
+  <!-- Bootstrap.css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+  /* ======= Static Rules ======= */
+  body {
+    background: url('http://lorempixel.com/1920/800/abstract/') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    font-size: 1.6em;
+    width: 100%;
+  }
+  hr {
+    width: 25%;
+  }
+  a:hover,
+  a:focus {
+    text-decoration: none;
+  }
+  section {
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  /* ======= Navbar Elements ======= */
+  .navbar-default {
+    background: transparent;
+    padding: 15px 20px 30px 20px;
+    border: none;
+  }
+  .navbar-nav {
+    font-size: 1.4em;
+  }
+  .navbar-default .navbar-nav>li>a {
+    color: white;
+  }
+  .navbar .navbar-nav,
+  .inline-picture {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+  }
+  .navbar .navbar-collapse {
+    text-align: center;
+  }
+  .navbar-header {
+    float: left;
+    padding: 15px 15px 0 15px;
+    text-align: center;
+    width: 100%;
+  }
+  .navbar-brand {
+    float: none;
+  }
+  .navbar {
+    margin-bottom: 0px;
+  }
+
+  /* ======= Page Elements ======= */
+  #empty {
+    padding-top: 225px;
+    padding-bottom: 225px;
+    width: 100%;
+    color: white;
+  }
+  #about,
+  #contact {
+    background: white;
+    color: black;
+  }
+  #products {
+    background: #eee;
+    color: black;
+  }
+  .space {
+    margin-bottom: 20px;
+  }
+  .gray-hr {
+    border-top: 1px solid #aeaeae;
+  }
+  .nochange {
+    color: black;
+  }
+  .nochange a:hover {
+    color: black;
+    text-decoration: none;
+  }
+  .contactSpacing {
+    padding-bottom: 10px;
+  }
+  #address {
+    margin-bottom: 0;
+  }
+  ul#horizontal {
+    padding: 0;
+  }
+  ul#horizontal li {
+    display: inline;
+  }
+  #map {
+    min-height: 400px;
+    height: 100%;
+  }
+
+  /* ======= Media Queries ======= */
+  @media screen and (max-width: 768px) {
+    body {
+      background: url('http://lorempixel.com/768/800/abstract/') no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      color: white;
+      font-size: 1.6em;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .mediaspace {
+      padding-bottom: 20px;
+    }
+    #contact-information {
+      padding-bottom: 10px;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    #aboutText,
+    #missionText {
+      padding: 0 100px 0 100px;
+    }
+    #contact-information {
+      padding-top: 60px;
+    }
+  }
+  </style>
+</head>
+
+<!-- ======= Content ======= -->
+
+<body id="page-top">
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-default" role="navigation" id="home">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="inline-picture" href="#home">
+      <img alt="logo" src="http://getbootstrap.com/apple-touch-icon.png" class="img-responsive">
+    </a>
+  </div>
+
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="empty">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <a href="#about" class="text-center"><button class="btn btn-default btn-lg">Find Out More</button></a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2 class="text-center">About</h2>
+        <hr>
+      </div>
+
+      <div class="col-xs-12">
+        <p id="aboutText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas egestas lectus mauris, eget vehicula lorem sagittis vel. Mauris in lacus volutpat, pulvinar quam eu, aliquam felis. Fusce non turpis sit amet libero pellentesque gravida. Donec eget posuere risus. Suspendisse non molestie lacus. Morbi pretium at ligula eu fermentum. Phasellus gravida mollis quam, eleifend blandit augue. Mauris sagittis mi vel enim vulputate mattis. Ut mattis semper arcu, vitae rhoncus mi luctus mattis. Ut consectetur, augue quis blandit consectetur, ligula justo semper arcu, faucibus semper lorem tellus in lorem. Donec at magna a urna vestibulum varius. Nulla tincidunt aliquam velit. Curabitur fermentum lacinia nunc, eleifend congue diam pharetra nec. Maecenas efficitur tempus magna, a venenatis lacus auctor at. Fusce congue metus lectus, quis venenatis lorem tempus quis. Maecenas ipsum leo, euismod vitae semper sit amet, commodo id sem.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="products" class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2 class="text-center">Products</h2>
+        <hr class="gray-hr">
+      </div>
+
+      <div class="col-xs-12 col-md-4 mediaspace">
+        <img src="http://placehold.it/150x150" class="center-block img-responsive img-circle space" alt="placeholder image">
+        <h3 class="text-center">Product 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas egestas lectus mauris, eget vehicula lorem sagittis vel. Mauris in lacus volutpat, pulvinar quam eu, aliquam felis. Fusce non turpis sit amet libero pellentesque gravida. Donec eget posuere risus. Suspendisse non molestie lacus. Morbi pretium at ligula eu fermentum.</p>
+      </div>
+
+      <div class="col-xs-12 col-md-4 mediaspace">
+        <img src="http://placehold.it/150x150" class="center-block img-responsive img-circle space" alt="placeholder image">
+        <h3 class="text-center">Product 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas egestas lectus mauris, eget vehicula lorem sagittis vel. Mauris in lacus volutpat, pulvinar quam eu, aliquam felis. Fusce non turpis sit amet libero pellentesque gravida. Donec eget posuere risus. Suspendisse non molestie lacus. Morbi pretium at ligula eu fermentum.</p>
+      </div>
+
+      <div class="col-xs-12 col-md-4 mediaspace">
+        <img src="http://placehold.it/150x150" class="center-block img-responsive img-circle space" alt="placeholder image">
+        <h3 class="text-center">Product 3</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas egestas lectus mauris, eget vehicula lorem sagittis vel. Mauris in lacus volutpat, pulvinar quam eu, aliquam felis. Fusce non turpis sit amet libero pellentesque gravida. Donec eget posuere risus. Suspendisse non molestie lacus. Morbi pretium at ligula eu fermentum.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2 class="text-center">Contact</h2>
+        <hr>
+      </div>
+
+      <!-- Contact information -->
+      <div class="col-xs-12 col-md-6" id="contact-information">
+        <img alt="logo" src="http://getbootstrap.com/apple-touch-icon.png" class="img-responsive center-block">
+        <div class="col-xs-12 text-center center-block">
+          <div class="col-xs-12">
+            <h3 class="text-center">Company Name</h3>
+            <p id="address">124 Conch Street</p>
+            <p>Bikini Bottom, Pacific Ocean</p>
+          </div>
+
+          <div class="col-xs-12 contactSpacing">
+            <i class="fa fa-envelope-o fa-2x"></i> <strong>Email</strong> <a class="nochange" href="mailto:contact@example.com?Subject=Inquiry">contact@example.com</a>
+          </div>
+
+          <div class="col-xs-12 contactSpacing">
+            <i class="fa fa-phone fa-2x"></i> <strong>Phone</strong>
+            <span class="nochange">(123) 456-7890</span>
+          </div>
+
+          <div class="col-xs-12"></div>
+        </div>
+      </div>
+
+      <!-- Google Map -->
+      <div class="col-xs-12 col-md-6 center-block text-center" id="map">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ======= Scripts ======= -->
+  <!-- jQuery.js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <!-- Bootstrap.js -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
+  <!-- Custom JS -->
+  <script>
+  /* Google Map */
+  function initialize() {
+    var myLatlng = new google.maps.LatLng(0, -160);
+    var mapOptions = {
+      zoom: 8,
+      draggable: !("ontouchend" in document),
+      scrollwheel: false,
+      center: myLatlng
+    }
+    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+    //=====Initialise Default Marker
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: 'marker'
+    //=====You can even customize the icons here
+    });
+
+    //=====Initialise InfoWindow
+    var infowindow = new google.maps.InfoWindow({
+      content: "<b>Bikini Bottom</b>"
+    });
+
+    //=====Eventlistener for InfoWindow
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map,marker);
+    });
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+
+  $('.map').click(function () {
+      $('.map iframe').css("pointer-events", "auto");
+  });
+  </script>
+</body>
+</html>
