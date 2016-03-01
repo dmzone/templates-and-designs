@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="#"> <!-- (Example: description to be displayed on Search Engine) -->
+  <meta name="Author" content="#"> <!-- (example: Developers Name) -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Title</title>
+
+<!-- ====== Stylesheets ======= -->
+  <!-- Bootstrap.css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- Custom CSS -->
+	<style>
+		a:link {
+			color: blue;
+		}
+		a:visited {
+			color: black;
+		}
+		.green {
+			color: green;
+			font-weight: bold;
+			font-size: 1.4em;
+		}
+		.blue {
+			background-color: blue;
+			color: white;
+		}
+	</style>
+</head>
+
+<body>
+
+<!-- ======= Content ======= -->
+	
+<h2>Selecting Items by Tag</h2>
+<ul>
+	<li>Test 1</li>
+	<li>Test 2</li>
+	<li>Test 3</li>
+</ul>
+<hr>
+
+<h2>Selecting Items by Class</h2>
+<p class="paragraph">Lorem ipsum dolor sit amet, odio sit aenean vivamus, quis nulla elit. Purus rhoncus felis odio. Quisque non elementum, ipsa id tempor, congue libero ligula lorem lacus lacus. </p>
+<hr>
+
+<h2>Selecting Items by ID</h2>
+<p id="item">Lorem ipsum dolor sit amet, odio sit aenean vivamus, quis nulla elit. Purus rhoncus felis odio. Quisque non elementum, ipsa id tempor, congue libero ligula lorem lacus lacus.</p>
+<hr>
+
+<h2>Traversing the DOM</h2>
+<p>Black = parent div</p>
+<div class="articles">
+	<h1>h1 Sibling</h1>
+	<ol class="article-list">
+		<li class="article-item">
+			<p>Children!</p>
+		</li>
+		<li class="article-item">
+			<p>Children!</p>
+		</li>
+		<li class="article-item">
+			<p>Children!</p>
+		</li>
+	</ol>
+</div>
+<hr>
+
+<h2>Toggle Class</h2>
+<p id="toggle">Some text</p>
+<button class="btn btn-default" id="button">Toggle</button>
+<hr>
+
+<h2>Set Attribute</h2>
+<button class="btn btn-default" id="setattr">Set Attribute</button>
+<ol id="attribute-list">
+	<li><a>Item #1</a></li>
+	<li><a href="#">Item #2</a></li>
+	<li><a href="#">Item #3</a></li>
+	<li><a href="#">Item #4</a></li>
+	<li><a href="#">Item #5</a></li>
+	<li><a href="#">Item #6</a></li>
+</ol>
+<hr>
+
+<h2>Event Listeners</h2>
+<div class="articles-event">
+	<input id="input" value="Cool Articles" type="text">
+	<h1>Cool Articles</h1>
+</div>
+<hr>
+
+<h2>Remove Items</h2>
+<div style="border: 1px solid red; width: 50%">
+	<p id="dumbparagraph">Blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
+</div>
+<button class="btn btn-default" id="remove">Remove Dumb Paragraph</button>
+<hr>
+
+<h2>Add Items</h2>
+<button class="btn btn-default" id="add">Add Puppies</button>
+<div id="flickrPlace"></div>
+<hr>
+
+<h2>Each Method</h2>
+<p id="each">Lorem ipsum dolor sit amet, odio sit aenean vivamus, quis nulla elit. Purus rhoncus felis odio. Quisque non elementum, ipsa id tempor, congue libero ligula lorem lacus lacus.</p>
+<hr>
+
+<h2>Event Listeners 2.0</h2>
+<p id="magic">Hover to see the magic in action.</p>
+<div class="clicker">
+	<p>Click me!</p>
+	<p>Click me too!</p>
+	<p>Don't forget about me!</p>
+</div>
+<hr>
+
+<h2>Event Delegation</h2>
+<button id="addP">Add Paragraphs</button>
+<div class="clickerTwo">
+</div>
+
+<!-- ======= Scripts ======= -->
+	<!-- jQuery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+	<!-- Custom JS -->
+	<script>
+	// Document ready jQuery
+	$(function() {
+		/* ======= Select all elements on page ======= */
+		var listElements = $('ul');
+		listElements.css('color','blue');
+
+		/* ======= Select elements by class ======= */
+		var classElements = $('.paragraph');
+		classElements.css('font-family', 'Lucida Console');
+
+		/* ======= Select elements by class ======= */
+		var idElements = $('#item');
+		idElements.css('background-color', 'orange');
+
+		/* ======= Traverse the DOM ======= */
+		var articleList = $(".article-list");
+
+		var h1 = articleList.siblings('h1').css('color', 'white');
+		var kids = articleList.find('*').css('color', 'red');
+		var parents = articleList.parents('div').css('background-color', 'black');
+
+		/* ======= Toggle Class ======= */
+		var toggle = $('#toggle');
+		$("#button").click(function() {
+			toggle.toggleClass('green');
+		});
+
+		/* ======= Set Attribute ======= */
+		var atributeList = $("#attribute-list");
+
+		$("#setattr").click(function() {
+			atributeList.children().first().find('a').attr("href", "#");
+		});
+
+		/* ======= Event Listeners ======= */
+		$('#input').on('change', function() {
+			var val = $(this).val();
+			var h1 = $(".articles-event").find('h1').text(val);
+		});
+
+		/* ======= Remove Items ======= */
+		var dumbparagraph = $('#dumbparagraph');
+
+		$("#remove").click(function() {
+			dumbparagraph.remove();
+		});
+
+		/* ======= Add Items ======= */
+		var flickrPlace = $('#flickrPlace');
+
+		$("#add").click(function() {
+			flickrPlace.prepend('<img src="http://loremflickr.com/150/150/puppy">');
+		});
+
+		/* ======= Each Method ======= */
+		$('#each').each(function() {
+			var length = $(this).text().length;
+			$(this).append(" " + length + " characters");
+		});
+
+		/* ======= Event Listeners 2.0 ======= */
+		// Waits for mouse hover event to toggle class
+		$('#magic').hover(function() {
+			$(this).toggleClass('blue');
+		});
+
+		// Uses property 'target' of event listener
+		$('.clicker').children().click(function(e) {
+			$(e.target).css('color','red');
+		});
+
+		/* ======= Event Delegation ======= */
+		// Paragraph Add Button
+		$('#addP').click(function() {
+			$('.clickerTwo').append('<p>Lorem ipsum dolor sit amet, odio sit aenean vivamus, quis nulla elit. Purus rhoncus felis odio. Quisque non elementum, ipsa id tempor, congue libero ligula lorem lacus lacus.</p>');
+		})
+
+		// Event Listener that will delegate tasks even before they are created
+		$('.clickerTwo').on('click', 'p', function(e) {
+			$(e.target).css('color','orange');
+		})
+	});
+	</script>
+</body>
+
+</html>
