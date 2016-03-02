@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="#"> <!-- (Example: description to be displayed on Search Engine) -->
+  <meta name="Author" content="#"> <!-- (example: Developers Name) -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Animated Tiles jQuery</title>
+
+<!-- ====== Stylesheets ======= -->
+  <!-- Font Awesome -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+  <!-- Bootstrap.css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+  .wrapper {
+    background-color: white;
+    width: 980px;
+    max-width: 100%;
+  }
+  .tile {
+    width: 250px;
+    max-width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    margin: 20px auto;
+  }
+  .tile h2,
+  .tile span {
+    font-size: 2em;
+    margin: 50px 0 50px 0;
+  }
+  .tile:hover,
+  .tile:focus {
+    box-shadow: 0 0 8px black;
+    opacity: 0.8;
+  }
+  .tile-header {
+    height: 200px;
+    color: white;
+    padding: 10px;
+    font-size: 40px;
+  }
+  .tile-green {
+    background-color: green;
+  }
+  .tile-blue {
+    background-color: blue;
+  }
+  .tile-red {
+    background-color: red;
+  }
+  .tile-content {
+    padding: 10px;
+    max-width: 100%;
+  }
+  </style>
+</head>
+
+<body>
+
+<!-- ======= Content ======= -->
+
+<div class="container">
+
+  <!-- Image Tiles -->
+  <div class="row wow fadeInUp">
+    <div class="col-sm-6 col-md-6 col-lg-4">
+      <div class="tile">
+        <img src="https://placeimg.com/250/200/people" alt="placeholder image" class="img-responsive">
+        <div class="tile-content">
+          <p>Arbitrary Text</p>
+        </div>
+      </div><!--end tile-->
+    </div><!--end column-->
+
+    <div class="col-sm-6 col-md-6 col-lg-4">
+      <div class="tile">
+        <img src="https://placeimg.com/250/200/sepia" alt="placeholder image" class="img-responsive">
+        <div class="tile-content">
+          <p>Arbitrary Text</p>
+        </div>
+      </div><!--end tile-->
+    </div><!--end column-->
+
+    <div class="col-sm-6 col-md-6 col-lg-4">
+      <div class="tile">
+        <img src="https://placeimg.com/250/200/tech" alt="placeholder image" class="img-responsive">
+        <div class="tile-content">
+          <p>Arbitrary Text</p>
+        </div>
+      </div><!--end tile-->
+    </div><!--end column-->
+  </div><!--end row-->
+</div><!--end container-->
+
+<!-- ======= Scripts ======= -->
+  <!-- jQuery.js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <!-- Bootstrap.js -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!-- Wow.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script>
+  new WOW().init();
+  </script>
+	<!-- Custom JS -->
+	<script>
+		var data = {
+			colorTiles : [
+				{
+					color: "green",
+					font: "fa-google",
+					text: "Arbitrary Text"
+				},
+				{
+					color: "blue",
+					font: "fa-twitter",
+					text: "Arbitrary Text"
+				},
+				{
+					color: "red",
+					font: "fa-linkedin",
+					text: "Arbitrary Text"
+				}
+			]
+		};
+
+		$(function() {
+			function tileMaker() {
+				// Store HTML for color tiles in variables
+				var colorRowHTML = '<div class="row wow fadeInUp colorTileRow"></div>';
+				var colorColumnHTML = '<div class="col-sm-6 col-md-6 col-lg-4">%tile%</div>';
+				var colorTileHTML = '<div class="tile"><div class="tile-header tile-%color%"><span class="fa %font%"></span></div><div class="tile-content"><p>%text%</p></div></div><!--end tile-->';
+				
+				$('.container').prepend(colorRowHTML);
+				
+				// Iterate through the stored data to replace the %content% with actual content
+				for (var colorItem = 0; colorItem < data.colorTiles.length; colorItem++) {
+					var formattedTile = colorTileHTML.replace('%color%', data.colorTiles[colorItem].color).replace('%font%', data.colorTiles[colorItem].font).replace('%text%', data.colorTiles[colorItem].text);
+
+					$('.colorTileRow').append(colorColumnHTML.replace('%tile%', formattedTile));
+				}
+			}
+			
+			tileMaker();
+
+		});
+	</script>
+</body>
+</html>
