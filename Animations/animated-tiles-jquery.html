@@ -76,9 +76,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <!-- Wow.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-  <script>
-  new WOW().init();
-  </script>
 	<!-- Custom JS -->
 	<script>
 		var data = {
@@ -119,6 +116,9 @@
 		};
 
 		$(function() {
+			// Initialize Wow.JS
+			new WOW().init();
+			
 			function colorTileMaker() {
 				// Store HTML for color tiles in variables
 				var colorRowHTML = '<div class="row wow fadeInUp colorTileRow"></div>';
