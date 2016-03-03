@@ -67,36 +67,6 @@
 <!-- ======= Content ======= -->
 
 <div class="container">
-
-  <!-- Image Tiles -->
-  <div class="row wow fadeInUp">
-    <div class="col-sm-6 col-md-6 col-lg-4">
-      <div class="tile">
-        <img src="https://placeimg.com/250/200/people" alt="placeholder image" class="img-responsive">
-        <div class="tile-content">
-          <p>Arbitrary Text</p>
-        </div>
-      </div><!--end tile-->
-    </div><!--end column-->
-
-    <div class="col-sm-6 col-md-6 col-lg-4">
-      <div class="tile">
-        <img src="https://placeimg.com/250/200/sepia" alt="placeholder image" class="img-responsive">
-        <div class="tile-content">
-          <p>Arbitrary Text</p>
-        </div>
-      </div><!--end tile-->
-    </div><!--end column-->
-
-    <div class="col-sm-6 col-md-6 col-lg-4">
-      <div class="tile">
-        <img src="https://placeimg.com/250/200/tech" alt="placeholder image" class="img-responsive">
-        <div class="tile-content">
-          <p>Arbitrary Text</p>
-        </div>
-      </div><!--end tile-->
-    </div><!--end column-->
-  </div><!--end row-->
 </div><!--end container-->
 
 <!-- ======= Scripts ======= -->
@@ -128,11 +98,28 @@
 					font: "fa-linkedin",
 					text: "Arbitrary Text"
 				}
+			],
+			imageTiles : [
+				{
+					src: 'https://placeimg.com/250/200/people',
+					alt: 'placeholder image',
+					text: 'Arbitrary Text'
+				},
+				{
+					src: 'https://placeimg.com/250/200/sepia',
+					alt: 'placeholder image',
+					text: 'Arbitrary Text'
+				},
+				{
+					src: 'https://placeimg.com/250/200/tech',
+					alt: 'placeholder image',
+					text: 'Arbitrary Text'
+				}
 			]
 		};
 
 		$(function() {
-			function tileMaker() {
+			function colorTileMaker() {
 				// Store HTML for color tiles in variables
 				var colorRowHTML = '<div class="row wow fadeInUp colorTileRow"></div>';
 				var colorColumnHTML = '<div class="col-sm-6 col-md-6 col-lg-4">%tile%</div>';
@@ -148,11 +135,32 @@
 				}
 			}
 			
-			tileMaker();
-			tileMaker();
-			tileMaker();
-			tileMaker();
+			function imageTileMaker() {
+				// Store HTML for color tiles in variables
+				var imageRowHTML = '<div class="row wow fadeInUp imageTileRow"></div>';
+				var imageColumnHTML = '<div class="col-sm-6 col-md-6 col-lg-4">%tile%</div>';
+				var imageTileHTML = '<div class="tile"><img src="%src%" alt="%alt%" class="img-responsive"><div class="tile-content"><p>%text%</p></div></div>';
+				
+				$('.container').append(imageRowHTML);
+				
+				// Iterate through the stored data to replace the %content% with actual content
+				for (var imageItem = 0; imageItem < data.imageTiles.length; imageItem++) {
+					var formattedTile = imageTileHTML.replace('%src%', data.imageTiles[imageItem].src).replace('%alt%', data.imageTiles[imageItem].alt).replace('%text%', data.imageTiles[imageItem].text);
+
+					$('.imageTileRow:last-child').append(imageColumnHTML.replace('%tile%', formattedTile));
+				}
+			}
 			
+			colorTileMaker();
+			imageTileMaker();
+			colorTileMaker();
+			imageTileMaker();
+			colorTileMaker();
+			imageTileMaker();
+			colorTileMaker();
+			imageTileMaker();
+			colorTileMaker();
+			imageTileMaker();
 
 		});
 	</script>
