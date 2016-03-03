@@ -136,19 +136,23 @@
 				// Store HTML for color tiles in variables
 				var colorRowHTML = '<div class="row wow fadeInUp colorTileRow"></div>';
 				var colorColumnHTML = '<div class="col-sm-6 col-md-6 col-lg-4">%tile%</div>';
-				var colorTileHTML = '<div class="tile"><div class="tile-header tile-%color%"><span class="fa %font%"></span></div><div class="tile-content"><p>%text%</p></div></div><!--end tile-->';
+				var colorTileHTML = '<div class="tile"><div class="tile-header tile-%color%"><span class="fa %font%"></span></div><div class="tile-content"><p>%text%</p></div></div>';
 				
-				$('.container').prepend(colorRowHTML);
+				$('.container').append(colorRowHTML);
 				
 				// Iterate through the stored data to replace the %content% with actual content
 				for (var colorItem = 0; colorItem < data.colorTiles.length; colorItem++) {
 					var formattedTile = colorTileHTML.replace('%color%', data.colorTiles[colorItem].color).replace('%font%', data.colorTiles[colorItem].font).replace('%text%', data.colorTiles[colorItem].text);
 
-					$('.colorTileRow').append(colorColumnHTML.replace('%tile%', formattedTile));
+					$('.colorTileRow:last-child').append(colorColumnHTML.replace('%tile%', formattedTile));
 				}
 			}
 			
 			tileMaker();
+			tileMaker();
+			tileMaker();
+			tileMaker();
+			
 
 		});
 	</script>
