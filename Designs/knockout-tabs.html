@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="#"> <!-- (Example: description to be displayed on Search Engine) -->
+  <meta name="Author" content="#"> <!-- (example: Developers Name) -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Knockout Tabs</title>
+
+<!-- ====== Stylesheets ======= -->
+  <!-- Bootstrap.css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+		body {
+			margin-top: 20px;
+		}
+		h2 {
+			cursor: pointer;
+			display: inline;
+		}
+		.bg-white {
+			margin-top: 10px;
+			background-color: white;
+		}
+		p {
+			font-size: 1.3em;
+		}
+  </style>
+</head>
+
+<body>
+
+<!-- ======= Content ======= -->
+
+	<div class="container">
+		<ul class="list-unstyled" data-bind="foreach: tab">
+			<li class="well" data-toggle="collapse" data-target="#" data-bind="attr: {'data-target': '#' + id}">
+				<h2 data-bind="text: headline"></h2>
+				<span class="glyphicon glyphicon-chevron-right pull-right"></span>
+				<div class="collapse" id="" data-bind="attr: {id: id}">
+					<p class="bg-white" data-bind="text: content"></p>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+
+<!-- ======= Scripts ======= -->
+  <!-- jQuery.js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <!-- Bootstrap.js -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<!-- Knockout.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+  <!-- Custom JS -->
+  <script>
+		/* ======= Model ======= */
+		var content = [
+			{
+				"headline": 'Hello World!',
+				"id": "helloworld",
+				"content": 'Cheese slices cheese slices cheese strings. Feta ricotta everyone loves cheese on toast cheesy feet manchego stinking bishop pecorino. Rubber cheese fromage queso feta ricotta cheesecake cow halloumi. Danish fontina babybel smelly cheese pepper jack bocconcini.'
+			},
+			{
+				"headline": 'Hi again, world',
+				"id": "hiagain",
+				"content": "Pepper jack mascarpone ricotta. The big cheese cheesy grin smelly cheese caerphilly cheese on toast cheese triangles when the cheese comes out everybody's happy fromage frais. Cheese and biscuits ricotta smelly cheese bavarian bergkase red leicester monterey jack mozzarella mascarpone. Roquefort pepper jack hard cheese cheesy grin brie stilton cream cheese dolcelatte. Boursin macaroni cheese queso blue castello."
+			},
+			{
+				"headline": 'Click me! I dare you...',
+				"id": "clickme",
+				"content": "Taleggio babybel cheese and wine. Ricotta mascarpone mascarpone rubber cheese taleggio fondue paneer dolcelatte. Cottage cheese rubber cheese bavarian bergkase manchego monterey jack goat camembert de normandie parmesan. Queso stinking bishop fondue lancashire queso."
+			}
+		];
+		
+		
+	/* ====== ViewModel ======= */
+	var ViewModel = function() {
+		var self = this;
+		
+		self.tab = ko.observableArray(content);
+	};
+		
+	/* ======= jQuery DOM Ready ======= */
+	$(function() {
+		ko.applyBindings(new ViewModel());
+	});
+  </script>
+</body>
+
+</html>
