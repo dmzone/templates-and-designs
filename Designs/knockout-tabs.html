@@ -36,7 +36,7 @@
 <!-- ======= Content ======= -->
 
 	<div class="container">
-		<ul class="list-unstyled" data-bind="foreach: tab">
+		<ul class="list-unstyled" data-bind="foreach: tab, visible: isVisible">
 			<li class="well" data-toggle="collapse" data-target="#" data-bind="attr: {'data-target': '#' + id}">
 				<h2 data-bind="text: headline"></h2>
 				<span class="glyphicon glyphicon-chevron-right pull-right"></span>
@@ -45,6 +45,11 @@
 				</div>
 			</li>
 		</ul>
+		<div class="text-center">
+			<button class="btn btn-default" data-bind="click: toggleVisibility">
+				<span class="glyphicon glyphicon-chevron-up" id="toggleBtn"></span>
+			</button>
+		</div>
 	</div>
 
 
@@ -82,6 +87,22 @@
 		var self = this;
 		
 		self.tab = ko.observableArray(content);
+		
+		self.isVisible = ko.observable(true);
+		
+		self.toggleVisibility = function() {
+			var button = $('#toggleBtn');
+			self.isVisible((!self.isVisible()));
+			
+			if (button.hasClass('glyphicon-chevron-up')) {
+				button.removeClass('glyphicon-chevron-up');
+				button.addClass('glyphicon-chevron-down');
+			}
+			else {
+				button.removeClass('glyphicon-chevron-down');
+				button.addClass('glyphicon-chevron-up');	
+			}
+		};
 	};
 		
 	/* ======= jQuery DOM Ready ======= */
