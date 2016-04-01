@@ -1,11 +1,3 @@
-/* This ensures media fits within divs*/
-img, embed, object, video {
-	max-width: 100%
-}
-
-/* This ensures there is enough space for mobile-users to click links*/
-nav a, button {
-	min-width: 48px;
-	min-height: 48px;
-	padding: 1.5em;
+.test {
+	color: blue;
 }
