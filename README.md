@@ -30,4 +30,4 @@ This repository contains a variety of single page HTML files, containing the nec
 ```
 
 ### Installation
-Click the ![Download Zip](http://i.imgur.com/4stqOrq.png) button to save it locally. Navigate to the folder you are interested in and open the HTML file in your browser. None of the files require the use of a server, however you can implement one if you'd like.
+Click the ![Download Zip](http://i.imgur.com/4stqOrq.png) button to save it locally. Navigate to the folder you are interested in and open the HTML file in your browser.
