@@ -5,9 +5,6 @@ This repository contains a variety of single page HTML files, containing the nec
 ```
 ├── Animations
 ├── Bootstrap
-│   ├── CSS Components
-│   ├── JavaScript Components
-│   ├── Navigation Bars
 ├── Designs
 ├── Gulp Workflow Template
 │   ├── dist
