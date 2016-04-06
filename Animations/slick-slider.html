@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="#"> <!-- (Example: description to be displayed on Search Engine) -->
+  <meta name="Author" content="#"> <!-- (example: Developers Name) -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Slick Slider</title>
+
+<!-- ====== Stylesheets ======= -->
+	<!-- Slick Slider CSS -->
+	<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css"/>
+  <!-- Custom CSS -->
+  <style>
+		.your-class > div {
+			width: 140px;
+			height: 140px;
+			background-color: darkblue;
+			color: white;
+		}
+  </style>
+</head>
+
+<body>
+
+<!-- ======= Content ======= -->
+
+  <div class="your-class">
+    <div>your content 1</div>
+    <div>
+			<img src="http://placehold.it/70x70"> Wow look at dat
+		</div>
+    <div>your content 3</div>
+  </div>
+
+<!-- ======= Scripts ======= -->
+  <!-- jQuery.js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<!-- jQuery Migrate -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.0/jquery-migrate.min.js"></script>
+	<!-- Slick Slider JS -->
+	<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+  
+	<!-- Custom JS -->
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.your-class').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 3000,
+      });
+    });
+  </script>
+	
+</body>
+
+</html>
