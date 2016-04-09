@@ -1,5 +1,5 @@
 # Templates and Designs
-This repository contains a variety of single page HTML files, containing the necessary CSS and JavaScript for quick implementation of a feature or new idea. It allows me to quickly jot down new ideas and have them contained in one file. Feel free to use any of the files here in your own work, no attribution required.
+This repository contains a variety of single page HTML files, containing the necessary CSS and JavaScript for quick implementation of a feature or new idea. Feel free to use any of the files here in your own work, no attribution required.
 
 ### File Structure
 ```
