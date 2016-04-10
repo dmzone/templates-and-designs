@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="#"> <!-- (Example: description to be displayed on Search Engine) -->
+  <meta name="Author" content="#"> <!-- (example: Developers Name) -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Flexbox Fun</title>
+
+<!-- ====== Stylesheets ======= -->
+  <!-- Custom CSS -->
+  <style>
+		.flexbox-container {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		
+		@media screen and (max-width: 768px) {
+			.flexbox-container {
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+  </style>
+</head>
+
+<body>
+
+<!-- ======= Content ======= -->
+
+<div class="flexbox-container">
+	<img src="http://www.animateit.net/data/media/218/Jumping_frog_2.gif">
+	<img src="http://www.animateit.net/data/media/218/Jumping_frog_2.gif">
+	<img src="http://www.animateit.net/data/media/218/Jumping_frog_2.gif">
+</div>
+
+
+<!-- ======= Scripts ======= -->
+  <!-- Custom JS -->
+  <script>
+  </script>
+</body>
+
+</html>
