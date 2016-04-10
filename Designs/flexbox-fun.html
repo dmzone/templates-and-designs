@@ -12,14 +12,75 @@
 <!-- ====== Stylesheets ======= -->
   <!-- Custom CSS -->
   <style>
+		h1 {
+			text-align: center;
+		}
+		
+		.box {
+			padding: 4em;
+		}
+		
+		.box-red {
+			background-color: crimson;
+		}
+		
+		.box-white {
+			border: 1px solid black;
+		}
+		
+		.box-blue {
+			background-color: #282491;
+		}
+		
 		.flexbox-container {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
 		}
 		
+		.flexbox-container2 {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+		}
+		
+		.flexbox-container3 {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+		}
+		
+		.flexbox-container4 {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+		}
+		
+		.flexbox-container5 {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+		}	
+		
+		.frogbox-container {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}		
+		
+/*
 		@media screen and (max-width: 768px) {
-			.flexbox-container {
+			.box-red {
+				order: 2;
+			}
+			.box-white {
+				order: -1;
+			}
+		}
+*/
+		
+		@media screen and (max-width: 768px) {
+			.frogbox-container {
 				flex-direction: column;
 				align-items: center;
 			}
@@ -30,8 +91,45 @@
 <body>
 
 <!-- ======= Content ======= -->
-
+<h1>Space Between</h1>
 <div class="flexbox-container">
+	<div class="box box-red"></div>
+	<div class="box box-white"></div>
+	<div class="box box-blue"></div>
+</div>
+
+<h1>Space Around</h1>
+<div class="flexbox-container2">
+	<div class="box box-red"></div>
+	<div class="box box-white"></div>
+	<div class="box box-blue"></div>
+</div>
+
+<h1>Flex Start</h1>
+<div class="flexbox-container3">
+	<div class="box box-red"></div>
+	<div class="box box-white"></div>
+	<div class="box box-blue"></div>
+</div>
+
+<h1>Flex End</h1>
+<div class="flexbox-container4">
+	<div class="box box-red"></div>
+	<div class="box box-white"></div>
+	<div class="box box-blue"></div>
+</div>
+
+<h1>Center</h1>
+<div class="flexbox-container5">
+	<div class="box box-red"></div>
+	<div class="box box-white"></div>
+	<div class="box box-blue"></div>
+</div>
+
+
+
+<h1>FUN WITH FROGS</h1>
+<div class="frogbox-container">
 	<img src="http://www.animateit.net/data/media/218/Jumping_frog_2.gif">
 	<img src="http://www.animateit.net/data/media/218/Jumping_frog_2.gif">
 	<img src="http://www.animateit.net/data/media/218/Jumping_frog_2.gif">
