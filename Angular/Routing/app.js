@@ -1,8 +1,8 @@
 (function() {
 		
-	var app = angular.module('router', ['ngRoute']);
+	angular.module('router', ['ngRoute'])
 		
-	app.config(function($routeProvider) {
+	.config(function($routeProvider) {
 		
 		$routeProvider
 		
@@ -14,22 +14,33 @@
 		.when('/second', {
 			templateUrl: 'templates/two.html',
 			controller: 'secondController'
-		});
+		})
 		
-	});
+		.when('/404', {
+			templateUrl: 'templates/error.html',
+			controller: 'errorController'
+		})
+		
+		.otherwise({redirectTo: '/404'});
+		
+	})
 	
-	app.controller('HeaderController', ['$scope', '$location', function($scope, $location) {
+	.controller('HeaderController', ['$scope', '$location', function($scope, $location) {
 		$scope.isActive = function(viewLocation) {
 			return viewLocation === $location.path();
 		};
-	}]);
+	}])
 	
-	app.controller('firstController', ['$scope', '$log', function($scope, $log) {
+	.controller('firstController', ['$scope', '$log', function($scope, $log) {
 		$scope.name = 'First';
-	}]);
+	}])
 	
-	app.controller('secondController', ['$scope', '$log', function($scope, $log) {
+	.controller('secondController', ['$scope', '$log', function($scope, $log) {
 		$scope.name = 'Second';
-	}]);
+	}])
+		
+	.controller('errorController', ['$scope', '$log', function($scope, $log) {
+		$scope.name = 'Help me!';
+	}]);		
 		
 })();
