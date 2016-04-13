@@ -26,7 +26,10 @@
 
 <div id="map_canvas" ng-controller="mapController">
 	<ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options">
-		<ui-gmap-markers models="locations" coords="'self'">
+		<ui-gmap-markers models="locations" coords="'self'" click="clickMarkers">
+      <ui-gmap-windows show="show">
+        <div ng-non-bindable>{{name}}</div>
+      </ui-gmap-windows>
 		</ui-gmap-markers>
 	</ui-gmap-google-map>
 </div>
