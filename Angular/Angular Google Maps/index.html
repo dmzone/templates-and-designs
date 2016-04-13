@@ -20,11 +20,13 @@
   <link rel="shortcut icon" type="image/x-icon" href="images/lightbulb.ico">
 </head>
 
-<body ng-controller="someController">
+<body>
 
 <!-- ======= Content ======= -->
 
-<ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+<div id="map_canvas" ng-controller="mapController">
+	<ui-gmap-google-map center="map.center" zoom="map.zoom" options="options"></ui-gmap-google-map>
+</div>
 
 
 <!-- ======= Scripts ======= -->
