@@ -3,25 +3,16 @@ This repository contains a variety of single page HTML files, containing the nec
 
 ### File Structure
 ```
+|── Angular
+│   ├── Angular Google Maps
+│   ├── Routing
+│   ├── todoApp
 ├── Animations
 ├── Bootstrap
 ├── Designs
 ├── Gulp Workflow Template
-│   ├── dist
-│   |   ├── css
-│   |   ├── img
-│   |   ├── js
-│   |   ├── uploads
-│   ├── src
-│   |   ├── css
-│   |   ├── img
-│   |   ├── js
-│   |   ├── uploads
 ├── One Page Template
 ├── Website Template
-│   ├── css
-│   ├── img
-│   ├── scripts
 ├── jQuery
 |   ├── AJAX Request
 ```
