@@ -3,6 +3,8 @@ var gulp = require('gulp'),
     cssnano = require('gulp-cssnano'),
     uglify = require('gulp-uglify'),
     imagemin = require('gulp-imagemin'),
+		concat = require('gulp-concat'),
+		rename = require('gulp-rename'),
     htmlmin = require('gulp-htmlmin');
 
 gulp.task('styles', function(){
@@ -12,7 +14,8 @@ gulp.task('styles', function(){
 });
 
 gulp.task('scripts', function(){
-  return gulp.src('src/js/*.js')
+	return gulp.src(['src/js/*.js', 'src/js/controllers/*.js', 'src/js/directives/*.js', 'src/js/filters/*.js', 'src/js/services/*.js'])
+		.pipe(concat('app.js'))
     .pipe(uglify())
     .pipe(gulp.dest('dist/js'));
 });
