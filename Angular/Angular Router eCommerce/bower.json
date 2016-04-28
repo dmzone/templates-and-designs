@@ -1,0 +1,29 @@
+{
+  "name": "sass-play",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "angular": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "slick-carousel": "^1.5.9",
+    "jquery": "^2.2.3",
+    "angular-slick": "^0.2.1",
+    "ekko-lightbox": "^4.0.1"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "assets/stylesheets/_bootstrap.scss",
+        "assets/fonts/bootstrap/*",
+        "assets/javascripts/bootstrap.js"
+      ]
+    }
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  },
+  "resolutions": {
+    "angular": "^1.5.5"
+  }
+}

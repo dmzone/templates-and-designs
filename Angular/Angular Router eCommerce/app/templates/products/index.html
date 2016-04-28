@@ -1,0 +1,13 @@
+<div class="container-fluid productsPage">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h1>{{name}}</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6 col-md-4 thumbnail" ng-repeat="product in products">
+      <img ng-src="{{product.imageURL}}" alt="product" class="img-responsive">
+      <h2>{{product.name}}</h2>
+    </div>
+</div>
